@@ -13,7 +13,7 @@ Vue.use(VueRouter)
   {
     path: '/admin',
     name: 'Admin',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Admin.vue')
+    component: () => import('../views/Admin.vue')
   }
 ]
 

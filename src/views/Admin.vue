@@ -17,7 +17,7 @@
                     <v-row justify="center">
                         <v-col cols="12" sm="10" md="8">
 
-                            <v-card class="elevation-12">
+                            <v-card class="elevation-12" v-if="!alert">
 
                                 <v-toolbar color="indigo" dark flat>
                                     <v-toolbar-title>Загрузка фотографій</v-toolbar-title>
@@ -41,7 +41,7 @@
                                                 v-if="!evacuation"
                                                 v-model="numberDecree"
                                                 :counter="6"
-                                                :rules="[v => !!v || 'Заповніть поле', v => (v && v.length == 6) || 'Номер постанови складається з 6 символів']"
+                                                :rules="[v => !!v || 'Заповніть поле', v => (v && v.length === 6) || 'Номер постанови складається з 6 символів']"
                                                 label="Номер постанови"
                                                 required
                                         ></v-text-field>
@@ -129,7 +129,7 @@
 
           setTimeout(() => {
             this.alert = false
-          }, 3000)
+          }, 2000)
         }
       },
       exit() {
