@@ -6,6 +6,7 @@
                 color="indigo"
                 dark
         >
+            <img src="../assets/logo.png" width="50" class="mr-5"/>
             <v-toolbar-title>Інспектор</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn color="error" @click="exit">Вихід</v-btn>
